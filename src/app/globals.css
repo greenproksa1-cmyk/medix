@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 248, 250, 252;
+  --medix-primary: #0e527b;
+  --medix-primary-light: #0d79bd;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background:
+    radial-gradient(circle at top left, rgba(14, 82, 123, 0.06), transparent 35%),
+    radial-gradient(circle at top right, rgba(5, 121, 189, 0.05), transparent 30%),
+    linear-gradient(180deg, rgb(var(--background-start-rgb)) 0%, #ffffff 100%);
+  font-family: var(--font-inter), "Inter", sans-serif;
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(14, 82, 123, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 82, 123, 0.03) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
+  opacity: 0.35;
+  z-index: -1;
+}
+
+[dir="rtl"] {
+  font-family: var(--font-tajawal), "Tajawal", sans-serif;
+}
+
+.premium-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  box-shadow: 0 18px 50px -30px rgba(14, 82, 123, 0.35);
+  transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+  box-shadow: 0 26px 70px -35px rgba(14, 82, 123, 0.35);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 32px;
+  box-shadow: 0 30px 90px -45px rgba(14, 82, 123, 0.45);
+}
+
+.section-shell {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    padding-inline: 2rem;
+  }
+}
+
+.text-navy {
+  color: var(--medix-primary);
+}
+
+.bg-navy {
+  background-color: var(--medix-primary);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--medix-primary);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 18px 40px -20px rgba(14, 82, 123, 0.5);
+}
+
+.btn-primary:hover {
+  background: var(--medix-primary-light);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(14, 82, 123, 0.2);
+  color: var(--medix-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--medix-primary);
+  color: #ffffff;
+}
+
+/* ===== Medix Premium UI Additions ===== */
+
+.medix-grid {
+  background-image:
+    linear-gradient(to right, rgba(13, 121, 189, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 121, 189, 0.06) 1px, transparent 1px);
+  background-size: 58px 58px;
+}
+
+.medix-hero-shadow {
+  box-shadow:
+    0 40px 120px rgba(14, 82, 123, 0.22),
+    0 16px 42px rgba(14, 82, 123, 0.12);
+}
+
+.medix-board {
+  position: relative;
+  overflow: hidden;
+  border-radius: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(115, 216, 255, 0.18), transparent 22%),
+    radial-gradient(circle at 80% 40%, rgba(115, 216, 255, 0.12), transparent 26%),
+    linear-gradient(180deg, #0f6a9f 0%, #0e527b 100%);
+}
+
+.medix-board::before {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  pointer-events: none;
+}
+
+.medix-board::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.08), transparent 48%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: auto, 58px 58px, 58px 58px;
+  pointer-events: none;
+}
+
+.medix-glass-card {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 18px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.medix-soft-panel {
+  border: 1px solid #d8e6f1;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 252, 255, 0.98)),
+    linear-gradient(135deg, rgba(13, 121, 189, 0.08), rgba(14, 82, 123, 0.02));
+  border-radius: 34px;
+  padding: 32px;
+  box-shadow:
+    0 18px 44px rgba(14, 82, 123, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.medix-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid #d7e6f1;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 0.65rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--medix-primary);
+  box-shadow: 0 12px 30px rgba(14, 82, 123, 0.06);
+}
+
+.medix-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #7d93a5;
+}
+
+.medix-title {
+  color: var(--medix-primary);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.medix-body {
+  color: #61778a;
+  line-height: 2;
+}
+
+.medix-border-card {
+  border: 1px solid #d8e6f1;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 28px;
+  box-shadow: 0 18px 44px rgba(14, 82, 123, 0.06);
+}
+
+.medix-blue-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0e527b 0%, #166796 100%);
+  color: white;
+}
+
+.medix-blue-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.25;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(95, 194, 255, 0.35), transparent 24%),
+    radial-gradient(circle at 80% 60%, rgba(105, 211, 255, 0.25), transparent 24%);
+}
+
+.medix-fade-top {
+  background: linear-gradient(180deg, rgba(236, 245, 251, 0.85) 0%, rgba(245, 248, 251, 0) 100%);
+}
+
+@media (max-width: 1024px) {
+  .medix-soft-panel {
+    padding: 24px;
+  }
+
+  .medix-board {
+    border-radius: 30px;
+  }
+
+  .medix-board::before {
+    inset: 18px;
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .medix-soft-panel {
+    border-radius: 24px;
+    padding: 20px;
+  }
+
+  .medix-board {
+    border-radius: 24px;
+  }
+
+  .medix-board::before {
+    inset: 14px;
+    border-radius: 18px;
+  }
+
+  .medix-glass-card {
+    padding: 14px;
+  }
+}
