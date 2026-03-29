@@ -89,14 +89,15 @@ export default function Header() {
         <div className="flex items-center justify-between">
           
           {/* Logo Zone */}
-          <Link href={`/${locale}`} className="flex items-center gap-4 group">
-            <div className="relative h-14 w-14 overflow-hidden rounded-2xl bg-[#F8FAFC] border border-slate-100 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-              <Image src="/logo.png" alt="Medix" width={40} height={40} className="object-contain" />
-            </div>
-            <div className={`${isArabic ? "text-right" : "text-left"}`}>
-              <div className="text-[28px] font-black tracking-tight text-[#0F172A] leading-none mb-1">Medix</div>
-              <div className="text-[10px] tracking-[0.2em] uppercase text-slate-400 font-bold hidden sm:block">Healthcare-Tech</div>
-            </div>
+          <Link href={`/${locale}`} className="flex items-center group relative hover:opacity-95 transition-opacity py-1">
+             <Image 
+                src="/logo.png" 
+                alt="Medix" 
+                width={200} 
+                height={75} 
+                className="object-contain w-36 md:w-44 lg:w-52 h-auto" 
+                priority
+             />
           </Link>
 
           {/* Center Nav */}

@@ -37,16 +37,14 @@ export default function Footer() {
           
           {/* Brand Column */}
           <div className="flex flex-col gap-6 lg:pr-12">
-            <Link href={`/${locale}`} className="inline-flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-4 w-fit hover:bg-white/10 transition-colors">
-              <div className="bg-white rounded-xl p-2 h-14 w-14 flex items-center justify-center shrink-0">
-                <Image src="/logo.png" alt="Medix" width={40} height={40} className="object-contain" />
-              </div>
-              <div>
-                <div className="text-[24px] font-black text-white leading-none mb-1 tracking-tight">Medix</div>
-                <div className="text-[10px] uppercase tracking-[0.2em] text-[#8FE4FF] font-bold">
-                  {isArabic ? "منصة مراجعة طبية" : "Strategic Review Platform"}
-                </div>
-              </div>
+            <Link href={`/${locale}`} className="inline-block bg-white border border-slate-200 rounded-2xl px-8 py-5 w-fit hover:shadow-xl hover:-translate-y-1 transition-all">
+               <Image 
+                 src="/logo.png" 
+                 alt="Medix Ecosystem" 
+                 width={180} 
+                 height={60} 
+                 className="object-contain w-40 h-auto" 
+               />
             </Link>
             <p className="text-slate-400 text-[15px] leading-relaxed max-w-sm">
               {isArabic 
