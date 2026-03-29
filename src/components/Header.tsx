@@ -85,17 +85,17 @@ export default function Header() {
       </div>
 
       {/* Main navigation */}
-      <div className="mx-auto max-w-[1400px] px-6 py-4">
+      <div className="mx-auto max-w-[1400px] px-6 py-2 lg:py-3">
         <div className="flex items-center justify-between">
           
           {/* Logo Zone */}
-          <Link href={`/${locale}`} className="flex items-center group relative hover:opacity-95 transition-opacity py-1">
+          <Link href={`/${locale}`} className="flex items-center group relative hover:opacity-95 transition-opacity">
              <Image 
                 src="/logo.png" 
                 alt="Medix" 
-                width={200} 
-                height={75} 
-                className="object-contain w-36 md:w-44 lg:w-52 h-auto" 
+                width={160} 
+                height={48} 
+                className="object-contain w-28 md:w-36 lg:w-40 h-8 md:h-10 lg:h-11" 
                 priority
              />
           </Link>

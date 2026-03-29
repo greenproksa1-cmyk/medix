@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -37,7 +37,7 @@ export default function Hero({ locale }: { locale: string }) {
   const telemetryBars = [62, 88, 48, 76, 58];
 
   return (
-    <section className="relative overflow-hidden pt-24 pb-24 lg:pt-28 lg:pb-28 border-b border-neutral-100 bg-white">
+    <section className="relative overflow-hidden pt-32 pb-24 lg:pt-44 lg:pb-28 border-b border-neutral-100 bg-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#EAF4FA,transparent_42%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(5,121,189,0.10),transparent_28%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(14,82,123,0.04)_1px,transparent_1px)] bg-[size:80px_80px] opacity-45" />
