@@ -191,213 +191,114 @@
     width: 100%;
 }
 
-.boardContainer {
+.imageContainer {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1.15;
+    aspect-ratio: 1.6 / 1;
     border-radius: 40px;
-    background: linear-gradient(145deg, #0e527b 0%, #054166 100%);
-    box-shadow: 
-        0 60px 120px -30px rgba(14,82,123,0.45),
-        inset 0 1px 1px rgba(255,255,255,0.25);
+    background: #0F172A;
     overflow: hidden;
-    transform: rotateY(-12deg) rotateX(6deg) translateZ(0);
+    box-shadow: 
+        0 60px 120px -30px rgba(14,82,123,0.35),
+        inset 0 0 0 1px rgba(255,255,255,0.1);
+    transform: rotateY(-10deg) rotateX(4deg);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    border: 1px solid rgba(255,255,255,0.1);
 }
 
-.rtl .boardContainer {
-    transform: rotateY(8deg) rotateX(4deg);
+.rtl .imageContainer {
+    transform: rotateY(10deg) rotateX(4deg);
 }
 
-.boardContainer:hover {
-    transform: rotateY(0deg) rotateX(0deg);
+.imageContainer:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.02);
 }
 
-.boardDecoration {
+.heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.imageOverlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at top right, rgba(255,255,255,0.1) 0%, transparent 60%);
+    background: linear-gradient(to tr, rgba(14,82,123,0.4) 0%, transparent 50%);
+    z-index: 1;
     pointer-events: none;
 }
 
-.glassPanelTop {
+/* Animated Data Points */
+.dataPoint1, .dataPoint2, .dataPoint3 {
     position: absolute;
-    top: 24px;
-    left: 24px;
-    right: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 24px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
+    width: 12px;
+    height: 12px;
+    background: #7DD3FC;
+    border-radius: 50%;
+    z-index: 5;
+    box-shadow: 0 0 20px #7DD3FC;
 }
 
-.panelTitle {
-    color: rgba(255,255,255,0.95);
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-}
+.dataPoint1 { top: 30%; left: 25%; animation: pulseData 4s infinite; }
+.dataPoint2 { top: 60%; left: 45%; animation: pulseData 4s infinite 1.5s; }
+.dataPoint3 { top: 40%; left: 70%; animation: pulseData 4s infinite 3s; }
 
-.panelStatus {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #4ADE80;
-    font-size: 13px;
-    font-weight: 700;
-    background: rgba(74, 222, 128, 0.15);
-    padding: 6px 14px;
-    border-radius: 999px;
-}
-
-.glassGrid {
-    position: absolute;
-    top: 110px;
-    left: 24px;
-    right: 24px;
-    bottom: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.glassCard {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 20px;
-    padding: 24px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.cardIcon {
-    width: 56px;
-    height: 56px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    flex-shrink: 0;
-}
-
-.cardContent {
-    flex: 1;
-}
-
-.cardValue {
-    font-size: 24px;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 4px;
-}
-
-.cardLabel {
-    font-size: 14px;
-    color: rgba(255,255,255,0.6);
-}
-
-.mainGlassCard {
-    flex: 1;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 20px;
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 24px;
-}
-
-.dataRow {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.dataRowHeader {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    color: rgba(255,255,255,0.85);
-    font-weight: 600;
-}
-
-.dataLayer {
-    height: 10px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 999px;
-    overflow: hidden;
-}
-
-.dataFill {
-    height: 100%;
-    background: linear-gradient(90deg, #38BDF8, #818CF8);
-    width: 85%;
-    border-radius: 999px;
-}
-
-.dataFill2 {
-    height: 100%;
-    background: linear-gradient(90deg, #34D399, #10B981);
-    width: 100%;
-    border-radius: 999px;
+@keyframes pulseData {
+    0%, 100% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(1.5); opacity: 1; box-shadow: 0 0 30px #7DD3FC; }
 }
 
 .floatingBadge {
     position: absolute;
-    bottom: -40px;
-    right: -40px;
-    background: #ffffff;
-    padding: 24px 32px;
+    bottom: -30px;
+    right: -30px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    padding: 24px;
     border-radius: 24px;
-    box-shadow: 0 30px 60px rgba(14,82,123,0.15);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
     z-index: 20;
-    border: 1px solid #F1F5F9;
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.rtl .floatingBadge {
+.rtlBadge {
     right: auto;
-    left: -40px;
+    left: -30px;
 }
 
 @media (max-width: 1024px) {
+    .imageContainer {
+        transform: none !important;
+        margin-top: 40px;
+    }
     .floatingBadge {
-        right: 20px;
+        right: 10px;
         bottom: -20px;
     }
-    .rtl .floatingBadge {
-        left: 20px;
+    .rtlBadge {
+        left: 10px;
         right: auto;
     }
 }
 
 .floatingIcon {
-    width: 64px;
-    height: 64px;
-    background: #F0F9FF;
-    border-radius: 18px;
+    width: 56px;
+    height: 56px;
+    background: #0E527B;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0E527B;
+    color: #ffffff;
 }
 
 .floatingText {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 2px;
     text-align: left;
 }
 
@@ -407,12 +308,12 @@
 
 .floatingText strong {
     color: #0F172A;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 800;
 }
 
 .floatingText span {
-    color: #64748B;
-    font-size: 15px;
-    font-weight: 500;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
 }

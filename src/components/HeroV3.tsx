@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, ShieldCheck, FileCheck2, Activity, ShieldQuestion, Stethoscope } from "lucide-react";
 import styles from "./HeroV3.module.css";
@@ -87,64 +88,26 @@ export default function HeroV3({ locale }: Props) {
                     </div>
 
                     <div className={styles.visualSection}>
-                        <div className={styles.boardContainer}>
-                            <div className={styles.boardDecoration} />
+                        <div className={styles.imageContainer}>
+                            <div className={styles.imageOverlay} />
+                            <Image 
+                                src="/hero-visual.png" 
+                                alt="Medix Strategic Visual" 
+                                width={1000} 
+                                height={600} 
+                                className={styles.heroImage}
+                                priority
+                            />
                             
-                            <div className={styles.glassPanelTop}>
-                                <div className={styles.panelTitle}>{t.boardLabel}</div>
-                                <div className={styles.panelStatus}>
-                                    <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                                    {t.boardStatus}
-                                </div>
-                            </div>
-
-                            <div className={styles.glassGrid}>
-                                <div className={styles.glassCard}>
-                                    <div className={styles.cardIcon}>
-                                        <ShieldCheck size={28} />
-                                    </div>
-                                    <div className={styles.cardContent}>
-                                        <div className={styles.cardValue}>{t.card1Value}</div>
-                                        <div className={styles.cardLabel}>{t.card1Label}</div>
-                                    </div>
-                                </div>
-
-                                <div className={styles.glassCard}>
-                                    <div className={styles.cardIcon}>
-                                        <FileCheck2 size={28} />
-                                    </div>
-                                    <div className={styles.cardContent}>
-                                        <div className={styles.cardValue}>{t.card2Value}</div>
-                                        <div className={styles.cardLabel}>{t.card2Label}</div>
-                                    </div>
-                                </div>
-
-                                <div className={styles.mainGlassCard}>
-                                    <div className={styles.dataRow}>
-                                        <div className={styles.dataRowHeader}>
-                                            <span>{t.data1Header}</span>
-                                            <span>85%</span>
-                                        </div>
-                                        <div className={styles.dataLayer}>
-                                            <div className={styles.dataFill} />
-                                        </div>
-                                    </div>
-                                    <div className={styles.dataRow}>
-                                        <div className={styles.dataRowHeader}>
-                                            <span>{t.data2Header}</span>
-                                            <span>100%</span>
-                                        </div>
-                                        <div className={styles.dataLayer}>
-                                            <div className={styles.dataFill2} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {/* Animated Data Points Overlays */}
+                            <div className={styles.dataPoint1} />
+                            <div className={styles.dataPoint2} />
+                            <div className={styles.dataPoint3} />
                         </div>
 
-                        <div className={styles.floatingBadge}>
+                        <div className={`${styles.floatingBadge} ${isArabic ? styles.rtlBadge : ""}`}>
                             <div className={styles.floatingIcon}>
-                                <Stethoscope size={32} />
+                                <Activity size={28} />
                             </div>
                             <div className={styles.floatingText}>
                                 <strong>{t.floatStrong}</strong>
