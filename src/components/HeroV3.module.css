@@ -19,7 +19,7 @@
     position: absolute;
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(14,82,123,0.06) 0%, rgba(255,255,255,0) 60%);
+    background: radial-gradient(circle, rgba(14, 82, 123, 0.06) 0%, rgba(255, 255, 255, 0) 60%);
     top: -200px;
     right: -200px;
 }
@@ -28,7 +28,7 @@
     position: absolute;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(5,121,189,0.05) 0%, rgba(255,255,255,0) 60%);
+    background: radial-gradient(circle, rgba(5, 121, 189, 0.05) 0%, rgba(255, 255, 255, 0) 60%);
     bottom: -150px;
     left: -150px;
 }
@@ -37,8 +37,8 @@
     position: absolute;
     inset: 0;
     background-image: 
-        linear-gradient(to right, rgba(14,82,123,0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(14,82,123,0.03) 1px, transparent 1px);
+        linear-gradient(to right, rgba(14, 82, 123, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(14, 82, 123, 0.03) 1px, transparent 1px);
     background-size: 80px 80px;
     mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
     -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
@@ -194,13 +194,13 @@
 .imageContainer {
     position: relative;
     width: 100%;
-    aspect-ratio: 1.6 / 1;
+    aspect-ratio: 16 / 10;
     border-radius: 40px;
     background: #0F172A;
     overflow: hidden;
     box-shadow: 
-        0 60px 120px -30px rgba(14,82,123,0.35),
-        inset 0 0 0 1px rgba(255,255,255,0.1);
+        0 60px 120px -30px rgba(14, 82, 123, 0.35),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     transform: rotateY(-10deg) rotateX(4deg);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -223,7 +223,7 @@
 .imageOverlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to tr, rgba(14,82,123,0.4) 0%, transparent 50%);
+    background: linear-gradient(to top right, rgba(14, 82, 123, 0.4) 0%, transparent 50%);
     z-index: 1;
     pointer-events: none;
 }
@@ -239,9 +239,9 @@
     box-shadow: 0 0 20px #7DD3FC;
 }
 
-.dataPoint1 { top: 30%; left: 25%; animation: pulseData 4s infinite; }
-.dataPoint2 { top: 60%; left: 45%; animation: pulseData 4s infinite 1.5s; }
-.dataPoint3 { top: 40%; left: 70%; animation: pulseData 4s infinite 3s; }
+.dataPoint1 { top: 30%; left: 25%; animation: pulseData 4s ease-in-out infinite; }
+.dataPoint2 { top: 60%; left: 45%; animation: pulseData 4s ease-in-out 1.5s infinite; }
+.dataPoint3 { top: 40%; left: 70%; animation: pulseData 4s ease-in-out 3s infinite; }
 
 @keyframes pulseData {
     0%, 100% { transform: scale(1); opacity: 0.4; }

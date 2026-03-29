@@ -1,0 +1,40 @@
+
+> medix-website@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.3
+  - Experiments (use with caution):
+    · workerThreads
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/3) ...
+ ✓ Generating static pages (3/3)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /_not-found                          871 B          87.9 kB
+├ ƒ /[locale]                            3.67 kB         119 kB
+├ ƒ /[locale]/about                      2.61 kB         118 kB
+├ ƒ /[locale]/benefits                   2.02 kB         157 kB
+├ ƒ /[locale]/contact                    2.61 kB         118 kB
+├ ƒ /[locale]/model                      2.77 kB         158 kB
+├ ƒ /[locale]/partnership                2.61 kB         118 kB
+├ ƒ /[locale]/services                   4.92 kB         156 kB
+├ ƒ /[locale]/team                       2.61 kB         118 kB
+└ ƒ /[locale]/technology                 2.61 kB         118 kB
++ First Load JS shared by all            87 kB
+  ├ chunks/23-826bb7c90b856d54.js        31.5 kB
+  ├ chunks/fd9d1056-4a917af64af6b262.js  53.6 kB
+  └ other shared chunks (total)          1.9 kB
+
+
+ƒ Middleware                             39.4 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
