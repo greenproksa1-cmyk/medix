@@ -58,25 +58,25 @@ export default function Header() {
   }), [isArabic]);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-xl shadow-md" : "bg-white shadow-sm"}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#081D33]/95 backdrop-blur-xl shadow-lg border-b border-white/10" : "bg-transparent"}`}>
       {/* Top micro-bar */}
-      <div className="bg-[#0F172A] text-white">
+      <div className="bg-white border-b border-slate-200 text-slate-600">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-2 text-[11px] md:text-xs">
           <div className="flex items-center gap-3">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8FE4FF] opacity-60" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#8FE4FF]" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00B4D8] opacity-60" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00B4D8]" />
             </span>
-            <span className="tracking-[0.15em] uppercase font-bold text-[#8FE4FF]">
+            <span className="tracking-[0.15em] uppercase font-bold text-[#0F47A1]">
               {labels.platformLabel}
             </span>
           </div>
           <div className="flex items-center gap-5">
-            <a href="tel:+966590401777" className="flex items-center gap-2 font-bold hover:text-[#8FE4FF] transition" dir="ltr">
-              <PhoneCall size={12} className="text-[#8FE4FF]" />
+            <a href="tel:+966590401777" className="flex items-center gap-2 font-bold hover:text-[#00B4D8] text-[#0A2540] transition" dir="ltr">
+              <PhoneCall size={12} className="text-[#00B4D8]" />
               +966 59 040 1777
             </a>
-            <Link href={switchedPath} className="hidden md:flex items-center gap-1.5 hover:text-[#8FE4FF] font-bold transition border-l border-white/20 pl-5">
+            <Link href={switchedPath} className="hidden md:flex items-center gap-1.5 text-slate-600 hover:text-[#00B4D8] font-bold transition border-l border-slate-200 pl-5">
               <Globe size={13} />
               {labels.switchLabel}
             </Link>
@@ -111,8 +111,8 @@ export default function Header() {
                   href={href}
                   className={`relative px-5 py-2.5 rounded-full text-[15px] font-bold transition-all duration-300 ${
                     active 
-                      ? "text-[#0E527B] bg-[#F0F9FF]" 
-                      : "text-slate-600 hover:text-[#0E527B] hover:bg-slate-50"
+                      ? "text-[#00B4D8] bg-white/10" 
+                      : "text-slate-200 hover:text-white hover:bg-white/10"
                   }`}
                 >
                   {isArabic ? item.ar : item.en}
@@ -125,9 +125,9 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <div className="hidden lg:flex items-center gap-4 mr-4">
               <div className={`${isArabic ? "text-left" : "text-right"}`}>
-                <div className="text-[11px] text-slate-500 font-medium mb-0.5">{labels.phoneLabel}</div>
-                <a href="tel:+966590401777" className="text-[17px] font-black text-[#0F172A] hover:text-[#0E527B] transition-colors flex items-center gap-2" dir="ltr">
-                  <PhoneCall size={14} className="text-slate-400" />
+                <div className="text-[11px] text-slate-300 font-medium mb-0.5">{labels.phoneLabel}</div>
+                <a href="tel:+966590401777" className="text-[17px] font-black text-white hover:text-[#00B4D8] transition-colors flex items-center gap-2" dir="ltr">
+                  <PhoneCall size={14} className="text-[#00B4D8]" />
                   +966 59 040 1777
                 </a>
               </div>
@@ -135,14 +135,14 @@ export default function Header() {
 
             <Link
               href={`/${locale}/contact`}
-              className="hidden md:inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-[#0E527B] text-white text-[15px] font-bold shadow-[0_10px_20px_-10px_rgba(14,82,123,0.5)] transition-all hover:bg-[#166A9C] hover:shadow-[0_15px_25px_-10px_rgba(14,82,123,0.6)] hover:-translate-y-0.5"
+              className="hidden md:inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-[#00B4D8] text-white text-[15px] font-black shadow-[0_10px_20px_-10px_rgba(0,180,216,0.4)] transition-all hover:bg-[#0096C7] hover:shadow-[0_15px_25px_-10px_rgba(0,180,216,0.6)] hover:-translate-y-0.5"
             >
               {labels.cta}
             </Link>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="xl:hidden flex items-center justify-center h-12 w-12 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-50 transition-colors"
+              className="xl:hidden flex items-center justify-center h-12 w-12 rounded-full border border-white/10 text-white hover:bg-white/5 transition-colors"
               aria-label={labels.menu}
             >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -152,7 +152,7 @@ export default function Header() {
 
         {/* Mobile Nav */}
         {isOpen && (
-          <div className="xl:hidden absolute top-full left-0 right-0 bg-white border-b border-slate-200 shadow-2xl p-6 px-6 pb-8 animate-in slide-in-from-top-4 fade-in duration-200 z-40">
+          <div className="xl:hidden absolute top-full left-0 right-0 bg-[#081D33] border-b border-white/10 shadow-2xl p-6 px-6 pb-8 animate-in slide-in-from-top-4 fade-in duration-200 z-40">
             <div className="flex flex-col gap-2">
               {NAV_ITEMS.map((item) => {
                 const href = `/${locale}${item.href ? `/${item.href}` : ""}`;
@@ -163,19 +163,19 @@ export default function Header() {
                     href={href}
                     onClick={() => setIsOpen(false)}
                     className={`flex items-center justify-between p-4 rounded-2xl text-[16px] font-bold transition-colors ${
-                      active ? "bg-[#F0F9FF] text-[#0E527B]" : "bg-slate-50 text-slate-700 hover:bg-slate-100"
+                      active ? "bg-white/10 text-[#00B4D8]" : "bg-transparent text-slate-200 hover:bg-white/5"
                     }`}
                   >
                     {isArabic ? item.ar : item.en}
-                    <ChevronRight size={18} className={isArabic ? "rotate-180 opacity-40" : "opacity-40"} />
+                    <ChevronRight size={18} className={isArabic ? "rotate-180 opacity-40 text-white" : "opacity-40 text-white"} />
                   </Link>
                 );
               })}
               
-              <div className="mt-6 pt-6 border-t border-slate-100 flex flex-col gap-4">
+              <div className="mt-6 pt-6 border-t border-white/10 flex flex-col gap-4">
                 <Link
                   href={switchedPath}
-                  className="flex items-center justify-center p-4 rounded-2xl bg-slate-50 text-slate-700 font-bold"
+                  className="flex items-center justify-center p-4 rounded-2xl bg-white/5 text-white font-bold"
                 >
                   <Globe size={18} className="mr-2" />
                   {labels.switchLabel}
@@ -183,7 +183,7 @@ export default function Header() {
                 <Link
                   href={`/${locale}/contact`}
                   onClick={() => setIsOpen(false)}
-                  className="p-4 rounded-2xl bg-[#0E527B] text-white font-bold text-center shadow-lg"
+                  className="p-4 rounded-2xl bg-[#00B4D8] text-white font-black text-center shadow-[0_10px_20px_-10px_rgba(0,180,216,0.4)]"
                 >
                   {labels.cta}
                 </Link>

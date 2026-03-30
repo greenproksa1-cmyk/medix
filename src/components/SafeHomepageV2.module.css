@@ -1,11 +1,11 @@
-/* SafeHomepageV2.module.css - Premium Edition */
 .page {
-    background: #F8FAFC;
+    background: #F4F8FB;
     color: #0F172A;
 }
 
 .section {
     padding: 120px 0;
+    background: transparent;
 }
 
 .sectionLight {
@@ -22,7 +22,7 @@
 .sectionKicker {
     font-size: 13px;
     font-weight: 800;
-    color: #0579BD;
+    color: #00B4D8;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     margin-bottom: 16px;
@@ -35,13 +35,13 @@
     content: "";
     width: 24px;
     height: 2px;
-    background: #0579BD;
+    background: #00B4D8;
 }
 
 .sectionTitle {
     font-size: clamp(36px, 4vw, 56px);
     font-weight: 800;
-    color: #0E527B;
+    color: #0A2540;
     line-height: 1.25;
     margin-bottom: 28px;
     letter-spacing: -0.02em;
@@ -66,12 +66,11 @@
 .trustStrip {
     background: #ffffff;
     border: 1px solid #E2E8F0;
-    border-radius: 32px;
+    border-radius: 24px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    box-shadow: 0 30px 60px -20px rgba(14,82,123,0.1);
+    box-shadow: 0 20px 40px rgba(10, 37, 64, 0.08);
     overflow: hidden;
-    backdrop-filter: blur(10px);
 }
 
 .trustItem {
@@ -86,19 +85,20 @@
 .trustIcon {
     width: 56px;
     height: 56px;
-    background: #F0F9FF;
+    background: rgba(0, 180, 216, 0.1);
+    border: 1px solid rgba(0, 180, 216, 0.2);
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0E527B;
+    color: #00B4D8;
     margin-bottom: 24px;
 }
 
 .trustTitle {
     font-size: 20px;
     font-weight: 800;
-    color: #0F172A;
+    color: #0A2540;
     margin-bottom: 12px;
 }
 
@@ -127,50 +127,51 @@
 
 .serviceCard {
     background: #ffffff;
-    border: 1px solid #F1F5F9;
-    border-radius: 24px;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
     padding: 48px;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+    box-shadow: 0 10px 30px rgba(10, 37, 64, 0.05);
 }
 
 .serviceCard:hover {
     transform: translateY(-8px);
-    box-shadow: 0 32px 64px -16px rgba(14,82,123,0.15);
-    border-color: #E2E8F0;
+    background: #ffffff;
+    box-shadow: 0 20px 50px rgba(10, 37, 64, 0.12);
+    border-color: #00B4D8;
 }
 
 .serviceIconWrapper {
     width: 64px;
     height: 64px;
-    background: #F8FAFC;
+    background: #F4F8FB;
     border: 1px solid #E2E8F0;
     border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0E527B;
+    color: #0F47A1;
     margin-bottom: 24px;
     transition: all 0.3s ease;
 }
 
 .serviceCard:hover .serviceIconWrapper {
-    background: #0E527B;
+    background: #00B4D8;
     color: #ffffff;
-    border-color: #0E527B;
+    border-color: #00B4D8;
 }
 
 .serviceTitle {
     font-size: 22px;
     font-weight: 800;
-    color: #0E527B;
+    color: #0A2540;
     margin-bottom: 16px;
     line-height: 1.4;
 }
 
 .serviceText {
     font-size: 16px;
-    color: #64748B;
+    color: #475569;
     line-height: 1.8;
 }
 
@@ -201,8 +202,8 @@
     top: 40px;
     left: 40px;
     right: 40px;
-    height: 1px;
-    background: linear-gradient(90deg, #E2E8F0 0%, #0579BD 50%, #E2E8F0 100%);
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #00B4D8 50%, transparent 100%);
     z-index: 1;
 }
 
@@ -221,38 +222,38 @@
 .stepNumber {
     width: 80px;
     height: 80px;
-    background: #ffffff;
-    border: 1px solid #E2E8F0;
+    background: #0A2540;
+    border: 2px solid #00B4D8;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     font-weight: 800;
-    color: #0E527B;
+    color: #ffffff;
     margin: 0 auto 32px;
     transition: all 0.4s ease;
-    box-shadow: 0 10px 20px rgba(14,82,123,0.05);
+    box-shadow: 0 10px 20px rgba(0, 180, 216, 0.2);
 }
 
 .processStep:hover .stepNumber {
-    border-color: #0E527B;
-    background: #0E527B;
+    border-color: #00B4D8;
+    background: #00B4D8;
     color: #ffffff;
     transform: scale(1.1);
-    box-shadow: 0 20px 40px rgba(14,82,123,0.2);
+    box-shadow: 0 20px 40px rgba(0, 180, 216, 0.4);
 }
 
 .stepTitle {
     font-size: 20px;
     font-weight: 800;
-    color: #0F172A;
+    color: #0A2540;
     margin-bottom: 12px;
 }
 
 .stepText {
     font-size: 16px;
-    color: #64748B;
+    color: #475569;
     line-height: 1.7;
 }
 
@@ -285,11 +286,11 @@
 }
 
 .whyDarkPanel {
-    background: linear-gradient(165deg, #0E527B 0%, #054166 100%);
-    border-radius: 48px;
+    background: linear-gradient(165deg, #0A2540 0%, #0F47A1 100%);
+    border-radius: 40px;
     padding: 80px;
     color: #ffffff;
-    box-shadow: 0 40px 100px -20px rgba(14,82,123,0.4);
+    box-shadow: 0 40px 100px rgba(10, 37, 64, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -305,11 +306,11 @@
 }
 
 .whyDarkPanel .sectionKicker {
-    color: #8fe4ff;
+    color: #00B4D8;
 }
 
 .whyDarkPanel .sectionKicker::before {
-    background: #8fe4ff;
+    background: #00B4D8;
 }
 
 .whyDarkPanel .sectionTitle {
@@ -382,7 +383,7 @@
 
 /* CTA */
 .ctaSection {
-    background: linear-gradient(135deg, #0e527b 0%, #054166 100%);
+    background: linear-gradient(135deg, #0A2540 0%, #0F47A1 100%);
     padding: 160px 0;
     text-align: center;
     position: relative;
@@ -399,7 +400,7 @@
 }
 
 .ctaKicker {
-    color: #8fe4ff;
+    color: #00B4D8;
     font-size: 13px;
     font-weight: 800;
     letter-spacing: 0.2em;
@@ -439,8 +440,8 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     color: #ffffff;
     padding: 20px 36px;
     border-radius: 9999px;
@@ -458,19 +459,20 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    background: #ffffff;
-    color: #0E527B;
+    background: #00B4D8;
+    color: #ffffff;
     padding: 20px 36px;
     border-radius: 9999px;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 800;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 180, 216, 0.3);
 }
 
 .primaryInverseBtn:hover {
     transform: translateY(-2px);
-    background: #F8FAFC;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    background: #0096C7;
+    color: #ffffff;
+    box-shadow: 0 15px 40px rgba(0, 180, 216, 0.5);
 }

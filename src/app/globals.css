@@ -3,21 +3,12 @@
 @tailwind utilities;
 
 :root {
-  /* Deep Institutional Medical Palette */
-  --medix-navy: #0F172A;
-  --medix-navy-deep: #0B1120;
-  --medix-blue-primary: #0E527B;
-  --medix-blue-accent: #0284C7;
-  --medix-cyan-soft: #7DD3FC;
-  --medix-medical-cyan: #06B6D4;
-  
   --foreground-rgb: 15, 23, 42;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 248, 250, 252;
-  
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
-  --text-on-dark: #F8FAFC;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 240, 247, 252;
+  --medix-primary: #0F47A1;
+  --medix-primary-light: #1976D2;
+  --medix-accent: #00B4D8;
 }
 
 html {
@@ -31,9 +22,9 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
   background:
-    radial-gradient(circle at top left, rgba(14, 82, 123, 0.06), transparent 35%),
-    radial-gradient(circle at top right, rgba(5, 121, 189, 0.05), transparent 30%),
-    linear-gradient(180deg, rgb(var(--background-start-rgb)) 0%, #ffffff 100%);
+    radial-gradient(circle at top left, rgba(15, 71, 161, 0.04), transparent 40%),
+    radial-gradient(circle at top right, rgba(0, 180, 216, 0.04), transparent 35%),
+    linear-gradient(180deg, rgb(var(--background-start-rgb)) 0%, rgb(var(--background-end-rgb)) 100%);
   font-family: var(--font-inter), "Inter", sans-serif;
   min-height: 100vh;
   position: relative;
@@ -46,8 +37,8 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(14, 82, 123, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(14, 82, 123, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
   opacity: 0.35;

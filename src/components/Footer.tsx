@@ -27,80 +27,80 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-[#0F172A] text-white pt-20 pb-8 mt-auto overflow-hidden">
+    <footer className="relative bg-[#081D33] text-white pt-24 pb-12 mt-auto overflow-hidden border-t border-white/5">
       {/* Decorative premium gradients */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,82,123,0.4),transparent_40%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(5,121,189,0.15),transparent_40%)]" />
-      
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,180,216,0.1),transparent_40%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(15,71,161,0.05),transparent_40%)]" />
+
       <div className="max-w-[1400px] mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-12 lg:gap-8 mb-16">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-16 lg:gap-12 mb-20">
+
           {/* Brand Column */}
-          <div className="flex flex-col gap-6 lg:pr-12">
-            <Link href={`/${locale}`} className="inline-block bg-white border border-slate-200 rounded-2xl px-8 py-5 w-fit hover:shadow-xl hover:-translate-y-1 transition-all">
-               <Image 
-                 src="/logo.png" 
-                 alt="Medix Ecosystem" 
-                 width={180} 
-                 height={60} 
-                 className="object-contain w-40 h-auto" 
-               />
+          <div className="flex flex-col gap-8 lg:pr-12">
+            <Link href={`/${locale}`} className="inline-flex bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-8 py-5 w-fit hover:border-[#00B4D8]/30 hover:-translate-y-1 transition-all shadow-2xl">
+              <Image
+                src="/logo.png"
+                alt="Medix Ecosystem"
+                width={180}
+                height={60}
+                className="object-contain w-40 h-auto"
+              />
             </Link>
-            <p className="text-slate-400 text-[15px] leading-relaxed max-w-sm">
-              {isArabic 
-                ? "طبقة مراجعة مؤسسية مستقلة لقطاع التأمين، تقدم تحليلات مبنية على الأدلة لضمان جودة القرار وضبط التكاليف." 
+            <p className="text-slate-400 text-[16px] leading-relaxed max-w-sm font-medium">
+              {isArabic
+                ? "طبقة مراجعة مؤسسية مستقلة لقطاع التأمين، تقدم تحليلات مبنية على الأدلة لضمان جودة القرار وضبط التكاليف."
                 : "An independent institutional review layer for the insurance sector, providing evidence-based analytics to ensure decision quality and cost control."}
             </p>
           </div>
 
           {/* Contact Column */}
-          <div className="flex flex-col gap-6">
-            <h4 className="text-[13px] font-bold uppercase tracking-[0.15em] text-white mb-2 flex items-center gap-3">
-              <span className="w-4 h-[2px] bg-[#0E527B]" />
+          <div className="flex flex-col gap-8">
+            <h4 className="text-[13px] font-black uppercase tracking-[0.2em] text-[#00B4D8] mb-2 flex items-center gap-3">
+              <span className="w-6 h-[2px] bg-[#00B4D8]" />
               {nav('contact')}
             </h4>
-            <div className="flex flex-col gap-4">
-              <a href="tel:+966590401777" className="group flex items-center gap-4 text-slate-300 hover:text-white transition-colors">
-                <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#8FE4FF] group-hover:bg-[#0E527B] group-hover:border-[#0E527B] transition-all">
-                  <PhoneCall size={16} />
+            <div className="flex flex-col gap-6">
+              <a href="tel:+966590401777" className="group flex items-center gap-5 text-slate-300 hover:text-white transition-colors">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#00B4D8] group-hover:bg-[#00B4D8] group-hover:text-[#081D33] transition-all shadow-lg">
+                  <PhoneCall size={18} />
                 </div>
                 <div className="flex flex-col" dir="ltr">
-                  <span className="text-[11px] uppercase tracking-wider text-slate-500 font-bold">{isArabic ? "الهاتف المؤسسي" : "Institutional Phone"}</span>
-                  <span className="text-[16px] font-bold">+966 59 040 1777</span>
+                  <span className="text-[11px] uppercase tracking-widest text-[#00B4D8] font-black mb-0.5">{isArabic ? "الهاتف المؤسسي" : "Institutional Phone"}</span>
+                  <span className="text-[18px] font-black tracking-tight">+966 59 040 1777</span>
                 </div>
               </a>
-              <div className="group flex items-center gap-4 text-slate-300">
-                <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#8FE4FF]">
-                  <Mail size={16} />
+              <div className="group flex items-center gap-5 text-slate-300">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#00B4D8]">
+                  <Mail size={18} />
                 </div>
                 <div className="flex flex-col text-left">
-                  <span className="text-[11px] uppercase tracking-wider text-slate-500 font-bold">{isArabic ? "البريد الإلكتروني" : "Email"}</span>
-                  <span className="text-[15px] font-medium">info@medix.com.sa</span>
+                  <span className="text-[11px] uppercase tracking-widest text-slate-500 font-black mb-0.5">{isArabic ? "البريد الإلكتروني" : "Email"}</span>
+                  <span className="text-[16px] font-bold">info@medix.com.sa</span>
                 </div>
               </div>
-              <div className="group flex items-center gap-4 text-slate-300">
-                <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#8FE4FF]">
-                  <MapPin size={16} />
+              <div className="group flex items-center gap-5 text-slate-300">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#06B6D4]">
+                  <MapPin size={18} />
                 </div>
                 <div className="flex flex-col text-left">
-                  <span className="text-[11px] uppercase tracking-wider text-slate-500 font-bold">{isArabic ? "المقر" : "Headquarters"}</span>
-                  <span className="text-[15px] font-medium">{isArabic ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}</span>
+                  <span className="text-[11px] uppercase tracking-widest text-slate-500 font-black mb-0.5">{isArabic ? "المقر" : "Headquarters"}</span>
+                  <span className="text-[16px] font-bold">{isArabic ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Links Column */}
-          <div className="flex flex-col gap-6">
-            <h4 className="text-[13px] font-bold uppercase tracking-[0.15em] text-white mb-2 flex items-center gap-3">
-              <span className="w-4 h-[2px] bg-[#0E527B]" />
+          <div className="flex flex-col gap-8">
+            <h4 className="text-[13px] font-black uppercase tracking-[0.2em] text-[#00E5FF] mb-2 flex items-center gap-3">
+              <span className="w-6 h-[2px] bg-[#00E5FF]" />
               {isArabic ? "روابط سريعة" : "Quick Links"}
             </h4>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-slate-400 hover:text-white transition-colors text-[15px] font-medium flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-white/20" />
+                  <Link href={item.href} className="text-slate-400 hover:text-[#00B4D8] transition-colors text-[16px] font-bold flex items-center gap-3 group">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white/10 group-hover:bg-[#00B4D8] group-hover:scale-150 transition-all" />
                     {item.name}
                   </Link>
                 </li>
@@ -109,15 +109,16 @@ export default function Footer() {
           </div>
 
           {/* Services Column */}
-          <div className="flex flex-col gap-6">
-            <h4 className="text-[13px] font-bold uppercase tracking-[0.15em] text-white mb-2 flex items-center gap-3">
-              <span className="w-4 h-[2px] bg-[#0E527B]" />
+          <div className="flex flex-col gap-8">
+            <h4 className="text-[13px] font-black uppercase tracking-[0.2em] text-[#00E5FF] mb-2 flex items-center gap-3">
+              <span className="w-6 h-[2px] bg-[#00E5FF]" />
               {/* @ts-ignore */}
               {nav('services') || "Services"}
             </h4>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-4">
               {serviceItems.map((item) => (
-                <li key={item} className="text-slate-400 text-[14px] leading-relaxed">
+                <li key={item} className="text-slate-400 text-[15px] leading-relaxed font-medium flex items-center gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-white/5" />
                   {item}
                 </li>
               ))}
@@ -127,13 +128,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-slate-500 text-[13px] font-medium">
+        <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <p className="text-slate-500 text-[13px] font-black tracking-wide">
             &copy; {new Date().getFullYear()} Medix. {t('rights')}
           </p>
-          <div className="flex items-center gap-6 text-[13px] text-slate-500 font-medium tracking-wide uppercase">
-            <span>{isArabic ? "منصة رقمية معتمدة" : "Certified Digital Platform"}</span>
-            <span className="w-1 h-1 rounded-full bg-slate-700" />
+          <div className="flex items-center gap-8 text-[11px] text-slate-500 font-black tracking-[0.2em] uppercase">
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00B4D8] animate-pulse" />
+              {isArabic ? "منصة رقمية معتمدة" : "Certified Digital Platform"}
+            </span>
+            <span className="w-1 h-1 rounded-full bg-slate-800" />
             <span>{isArabic ? "قطاع التأمين" : "Insurance Sector"}</span>
           </div>
         </div>

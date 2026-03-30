@@ -1,12 +1,15 @@
 .hero {
     position: relative;
     overflow: hidden;
-    min-height: 98vh;
+    min-height: 95vh;
     display: flex;
     align-items: center;
-    background: radial-gradient(circle at 80% 20%, #111827 0%, #0B1120 100%);
+    background: linear-gradient(145deg, #081D33 0%, #0F47A1 100%);
     padding: 160px 0 120px;
-    color: #F8FAFC;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 20px 60px -10px rgba(15, 71, 161, 0.15);
+    margin-bottom: 20px;
 }
 
 .heroBackground {
@@ -18,19 +21,19 @@
 
 .glowBlob1 {
     position: absolute;
-    width: 900px;
-    height: 900px;
-    background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
-    top: -300px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(0, 180, 216, 0.1) 0%, rgba(255, 255, 255, 0) 60%);
+    top: -200px;
     right: -200px;
 }
 
 .glowBlob2 {
     position: absolute;
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.07) 0%, transparent 70%);
-    bottom: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(25, 118, 210, 0.15) 0%, rgba(255, 255, 255, 0) 60%);
+    bottom: -150px;
     left: -150px;
 }
 
@@ -38,16 +41,15 @@
     position: absolute;
     inset: 0;
     background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(to right, rgba(14, 82, 123, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(14, 82, 123, 0.03) 1px, transparent 1px);
     background-size: 80px 80px;
-    mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
-    -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
-    opacity: 0.8;
+    mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1360px;
     margin: 0 auto;
     padding: 0 5%;
     position: relative;
@@ -89,30 +91,30 @@
     align-items: center;
     gap: 8px;
     padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(0, 180, 216, 0.3);
     border-radius: 9999px;
-    color: #7DD3FC;
+    color: #A5F3FC;
     font-size: 13px;
     font-weight: 800;
-    letter-spacing: 0.1em;
-    backdrop-filter: blur(12px);
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 20px rgba(6, 182, 212, 0.1);
     margin-bottom: 32px;
 }
 
 .badgeDot {
     width: 8px;
     height: 8px;
-    background: #0EA5E9;
+    background: #00B4D8;
     border-radius: 50%;
-    box-shadow: 0 0 10px #0EA5E9;
+    box-shadow: 0 0 10px rgba(0, 180, 216, 0.6);
 }
 
 .title {
     font-size: clamp(40px, 4.2vw, 62px);
     font-weight: 800;
-    line-height: 1.2;
-    color: #FFFFFF;
+    line-height: 1.25;
+    color: #F8FAFC;
     margin-bottom: 28px;
     letter-spacing: -0.01em;
 }
@@ -124,7 +126,8 @@
 }
 
 .titleHighlight {
-    background: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%);
+    color: #06B6D4;
+    background: linear-gradient(135deg, #38BDF8 0%, #06B6D4 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -133,7 +136,7 @@
 .description {
     font-size: clamp(16px, 1.2vw, 20px);
     line-height: 1.8;
-    color: #94A3B8;
+    color: #E2E8F0;
     margin-bottom: 48px;
     font-weight: 400;
     max-width: 640px;
@@ -160,21 +163,21 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
-    background: #0EA5E9;
+    background: #00B4D8;
     color: #ffffff;
     padding: 20px 40px;
     border-radius: 9999px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 800;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.4);
+    box-shadow: 0 20px 40px -15px rgba(0, 180, 216, 0.4);
 }
 
 .btnPrimary:hover {
-    background: #0284C7;
+    background: #0096C7;
     transform: translateY(-2px);
-    box-shadow: 0 25px 50px -10px rgba(14, 165, 233, 0.5);
+    box-shadow: 0 25px 50px -15px rgba(0, 180, 216, 0.6);
 }
 
 .btnSecondary {
@@ -183,20 +186,20 @@
     justify-content: center;
     gap: 12px;
     background: rgba(255, 255, 255, 0.05);
-    color: #FFFFFF;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #F8FAFC;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     padding: 20px 40px;
     border-radius: 9999px;
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    backdrop-filter: blur(12px);
 }
 
 .btnSecondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: #06B6D4;
+    background: rgba(6, 182, 212, 0.1);
+    color: #A5F3FC;
     transform: translateY(-2px);
 }
 
@@ -213,7 +216,7 @@
     position: absolute;
     width: 140%;
     height: 140%;
-    background: radial-gradient(circle at center, rgba(14, 165, 233, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(14, 82, 123, 0.08) 0%, transparent 70%);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -226,11 +229,11 @@
     width: 100%;
     max-width: 640px;
     aspect-ratio: 16 / 11;
-    background: #111827;
-    border-radius: 48px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 40px;
     overflow: hidden;
     box-shadow: 
-        0 40px 100px -20px rgba(0, 0, 0, 0.6),
+        0 40px 100px -20px rgba(0, 0, 0, 0.4),
         inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 5;
@@ -238,25 +241,26 @@
 
 .imageContainer:hover {
     transform: translateY(-8px);
-    box-shadow: 0 60px 120px -30px rgba(0, 0, 0, 0.7);
+    box-shadow: 
+        0 60px 120px -30px rgba(14, 82, 123, 0.45);
 }
 
 .heroImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.9;
+    opacity: 0.95;
     transition: transform 1.2s ease-out;
 }
 
 .imageContainer:hover .heroImage {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .imageOverlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(11, 17, 32, 0.7) 0%, transparent 60%);
+    background: linear-gradient(to top, rgba(2, 6, 12, 0.7) 0%, transparent 60%);
     z-index: 2;
     pointer-events: none;
 }
@@ -272,31 +276,31 @@
 .panelDecorTop {
     top: 24px;
     right: 24px;
-    border-top: 2px solid rgba(255, 255, 255, 0.3);
-    border-right: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .panelDecorBottom {
     bottom: 24px;
     left: 24px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .floatingBadge {
     position: absolute;
     bottom: 10%;
     right: -20px;
-    background: rgba(15, 23, 42, 0.9);
+    background: rgba(5, 14, 27, 0.85);
     backdrop-filter: blur(24px);
     padding: 24px 32px;
     border-radius: 28px;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     gap: 20px;
     z-index: 20;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.3);
 }
 
 .rtlBadge {
@@ -335,13 +339,14 @@
 .floatingIcon {
     width: 60px;
     height: 60px;
-    background: #0EA5E9;
+    background: rgba(0, 180, 216, 0.15);
+    border: 1px solid rgba(0, 180, 216, 0.4);
     border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
-    box-shadow: 0 12px 24px rgba(14, 165, 233, 0.3);
+    color: #A5F3FC;
+    box-shadow: 0 12px 24px rgba(0, 180, 216, 0.2);
 }
 
 .floatingText {
@@ -349,7 +354,6 @@
     flex-direction: column;
     gap: 4px;
     text-align: left;
-    color: #FFFFFF;
 }
 
 .rtl .floatingText {
@@ -357,7 +361,7 @@
 }
 
 .floatingText strong {
-    color: #FFFFFF;
+    color: #F8FAFC;
     font-size: 19px;
     font-weight: 900;
 }
