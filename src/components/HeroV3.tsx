@@ -88,21 +88,23 @@ export default function HeroV3({ locale }: Props) {
                     </div>
 
                     <div className={styles.visualSection}>
+                        {/* Integrated Visual Panel Design */}
+                        <div className={styles.visualGlow} />
+                        
                         <div className={styles.imageContainer}>
                             <div className={styles.imageOverlay} />
+                            <div className={styles.panelDecorTop} />
+                            
                             <Image 
                                 src="/hero-visual.png" 
                                 alt="Medix Strategic Visual" 
-                                width={1000} 
-                                height={600} 
+                                width={1200} 
+                                height={800} 
                                 className={styles.heroImage}
                                 priority
                             />
                             
-                            {/* Animated Data Points Overlays */}
-                            <div className={styles.dataPoint1} />
-                            <div className={styles.dataPoint2} />
-                            <div className={styles.dataPoint3} />
+                            <div className={styles.panelDecorBottom} />
                         </div>
 
                         <div className={`${styles.floatingBadge} ${isArabic ? styles.rtlBadge : ""}`}>

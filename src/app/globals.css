@@ -3,11 +3,21 @@
 @tailwind utilities;
 
 :root {
+  /* Deep Institutional Medical Palette */
+  --medix-navy: #0F172A;
+  --medix-navy-deep: #0B1120;
+  --medix-blue-primary: #0E527B;
+  --medix-blue-accent: #0284C7;
+  --medix-cyan-soft: #7DD3FC;
+  --medix-medical-cyan: #06B6D4;
+  
   --foreground-rgb: 15, 23, 42;
-  --background-start-rgb: 248, 250, 252;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 248, 250, 252;
-  --medix-primary: #0e527b;
-  --medix-primary-light: #0d79bd;
+  
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-on-dark: #F8FAFC;
 }
 
 html {
